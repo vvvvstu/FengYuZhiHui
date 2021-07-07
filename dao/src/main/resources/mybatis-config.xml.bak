@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!-- 1,连接数据库，此步骤在spring里可以直接写，这里省去
+
+        <environments default="development">
+            <environment id="development">
+                <transactionManager type="JDBC"/>
+                    <dataSource type="POOLED">
+                        <property name="driver" value="${driver}"/>
+                        <property name="url" value="${url}"/>
+                        <property name="username" value="${username}"/>
+                        <property name="password" value="${password}"/>
+                    </dataSource>
+            </environment>
+        </environments>
+
+
+    -->
+    <!-- 2,扫描对应mapper文件，省略，同上
+        <mappers>
+            <package name="com.qf.dao"/>
+        </mappers>
+    -->
+                                <!-- 存二级缓存，懒加载，分页。 -->
+
+<!--    <plugins>-->
+<!--        &lt;!&ndash; com.github.pagehelper为PageHelper类所在包名 &ndash;&gt;-->
+<!--        &lt;!&ndash; 分页 ，可以在mybatis-config.xml里配，或者在spring配置文件（applicationContext-dao.xml）里配 &ndash;&gt;-->
+<!--        <plugin interceptor="com.github.pagehelper.PageInterceptor">-->
+<!--            &lt;!&ndash; 分页插件会自动检测当前的数据库链接，自动选择合适的分页方式。即：配置方言&ndash;&gt;-->
+<!--            <property name="helperDialect" value="mysql"/>-->
+<!--            &lt;!&ndash; 分页合理化参数   分页合理化参数，默认值为false。-->
+<!--            当该参数设置为 true 时，pageNum<=0 时会查询第一页，-->
+<!--            pageNum>pages（超过总数时），会查询最后一页。默认false 时，直接根据参数进行查询。&ndash;&gt;-->
+<!--            <property name="reasonable" value="true"/>-->
+<!--            &lt;!&ndash;支持通过 Mapper 接口参数来传递分页参数&ndash;&gt;-->
+<!--            <property name="supportMethodsArguments" value="true"/>-->
+<!--        </plugin>-->
+<!--    </plugins>-->
+</configuration>
